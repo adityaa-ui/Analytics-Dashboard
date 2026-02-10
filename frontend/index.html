@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>YouTube Analytics</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- background video -->
+<video autoplay muted loop class="bg-video">
+  <source src="bg.mp4" type="video/mp4">
+</video>
+
+<div class="overlay"></div>
+
+<div class="container">
+
+  <!-- INPUT -->
+  <section id="inputSection">
+    <h1>YouTube Analytics</h1>
+    <p>Paste a video link to visualize engagement</p>
+
+    <input id="urlInput" placeholder="YouTube video URL" />
+    <button id="analyzeBtn">Analyze</button>
+
+    <p id="status"></p>
+  </section>
+
+  <!-- DASHBOARD -->
+  <section id="dashboardSection" hidden>
+    <h2 id="title"></h2>
+
+    <div class="stats">
+      <div><span>Views</span><b id="views"></b></div>
+      <div><span>Likes</span><b id="likes"></b></div>
+      <div><span>Comments</span><b id="comments"></b></div>
+      <div class="highlight"><span>Engagement</span><b id="engagement"></b></div>
+    </div>
+
+    <div class="charts">
+      <canvas id="lineChart"></canvas>
+      <canvas id="barChart"></canvas>
+    </div>
+
+    <button class="secondary" id="resetBtn">Analyze another video</button>
+  </section>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
